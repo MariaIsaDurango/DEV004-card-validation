@@ -1,14 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+      <input type="text" placeholder="Search.." />
+    </div>
+    <div style="padding-left: 16px">
+      <div class="wrapper">
+        <div class="container">
+          <article class="part card-details">
+            <h1>Ingresar Datos de la tarjeta</h1>
+          </article>
+
+          <div class="group card-number">
+            <label for="crediCard">Número Tarjeta</label>
+            <input
+              type="text"
+              name="crediCard"
+              id="crediCard"
+              maxlength="16"
+              placeholder="0000 0000 0000 0000"
+              required
+            />
+
+            <button id="btncrediCard">Validar</button>
+            <p id="validate"></p>
+            <div class="group card-name"></div>
+            <label for="expiry">Expira en</label>
+            <div id="date-val">
+              <select id="expiry-month" required>
+                <option
+                  id="trans-label_month"
+                  value=""
+                  default="default"
+                  selected="selected"
+                >
+                  Month
+                </option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select id="expiry-year" required>
+                <option
+                  id="trans-label_year"
+                  value=""
+                  default=""
+                  selected="selected"
+                >
+                  Year
+                </option>
+                <option value="2023">23</option>
+                <option value="2024">24</option>
+                <option value="2025">25</option>
+                <option value="2026">26</option>
+                <option value="2027">27</option>
+                <option value="2028">28</option>
+                <option value="2029">29</option>
+                <option value="2030">30</option>
+                <option value="2031">31</option>
+                <option value="2032">32</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="form-sec-code" class="form-field">
+          <label for="sec-code">Codigo de Seguridad:</label>
+          <input type="password" maxlength="3" placeholder="123" required />
+        </div>
+        <div class="grup submit-group">
+          <span class="arrow"></span>
+        </div>
+
+        <div class="part bg"></div>
+      </div>
+    </div>
+
+    <div id="result"></div>
+    <div class="foto"></div>
+
     <header></header>
     <main></main>
     <footer></footer>
-    <script src="index.js" type="module"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
